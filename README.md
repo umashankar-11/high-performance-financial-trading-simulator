@@ -100,3 +100,7 @@ The `Market` class generates random prices within a specified range, simulating 
 2. **Trader 2** places a **SELL** order for 30 shares at another random price.
 3. The system tries to match orders based on price.
 4. If a match is found, the system prints the matched orders and the trade price.
+
+## Output:
+![WhatsApp Image 2024-12-07 at 12 08 04_96f3939a](https://github.com/user-attachments/assets/1c5038be-96d6-4728-a1bf-8af64afd964e)
+
