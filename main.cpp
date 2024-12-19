@@ -17,10 +17,10 @@ public:
     int quantity;
 
     bool operator<(const Order& other) const {
-        // For BUY orders, we want the highest price to be prioritized
+        
         if (type == Type::BUY && other.type == Type::BUY)
             return price < other.price;
-        // For SELL orders, we want the lowest price to be prioritized
+        
         if (type == Type::SELL && other.type == Type::SELL)
             return price > other.price;
         return false;
@@ -42,12 +42,12 @@ public:
             Order sellOrder = sellOrders.top();
 
             if (buyOrder.price >= sellOrder.price) {
-                // Match the order
+               
                 std::cout << "Matched Order: Buy Order #" << buyOrder.id
                           << " with Sell Order #" << sellOrder.id
                           << " at price " << sellOrder.price << std::endl;
 
-                // Execute the trade: assume the full quantity of the orders are matched
+               
                 buyOrders.pop();
                 sellOrders.pop();
             } else {
@@ -80,7 +80,7 @@ public:
         Order order(orderId, type, price, quantity);
         orderBook.addOrder(order);
 
-        // Update the portfolio based on the order type
+        
         if (type == Order::Type::BUY) {
             cash -= price * quantity;
             shares += quantity;
@@ -117,16 +117,16 @@ private:
 int main() {
     Market market;
     OrderBook orderBook;
-    Trader trader1(1, 10000.0); // Trader with $10,000
-    Trader trader2(2, 5000.0);  // Trader with $5,000
+    Trader trader1(1, 10000.0); 
+    Trader trader2(2, 5000.0);  
 
-    // Simulate placing orders
+   
     trader1.placeOrder(Order::Type::BUY, market.generatePrice(), 50, orderBook);
     trader2.placeOrder(Order::Type::SELL, market.generatePrice(), 30, orderBook);
     trader1.placeOrder(Order::Type::BUY, market.generatePrice(), 20, orderBook);
     trader2.placeOrder(Order::Type::SELL, market.generatePrice(), 20, orderBook);
 
-    // Match orders
+    
     orderBook.matchOrders();
 
     return 0;
