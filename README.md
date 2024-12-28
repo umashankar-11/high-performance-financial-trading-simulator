@@ -18,18 +18,18 @@ To compile and run this project, you need a C++ development environment. The pro
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/stock-trading-simulation.git
-   cd stock-trading-simulation
+   git clone https://github.com/umashankar-11/high-performance-financial-trading-simulator-using-c-.git
+   cd high-performance-financial-trading-simulator-using-c-
    ```
 
 2. Compile the code using a C++ compiler (e.g., `g++`):
    ```bash
-   g++ -o stock_trading stock_trading.cpp
+   g++ -o main.cpp
    ```
 
 3. Run the executable:
    ```bash
-   ./stock_trading
+   ./high-performance-financial-trading-simulator-using-c-
    ```
 
 ## How It Works
