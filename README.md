@@ -1,4 +1,4 @@
-# Stock Trading Simulation
+# high performance financial trading simulator
 
 This project simulates a stock trading environment where traders can place buy and sell orders, and the system matches orders based on their prices. The orders are stored in an order book, and a market generates random stock prices for trading. The system uses a priority queue to prioritize orders based on price, and trades are executed when matching buy and sell orders are found.
 
