@@ -87,7 +87,7 @@ public:
         std::cout << "Portfolio Details: \n";
         for (const auto &trade : trades) {
             costModel.printTransactionCostDetails(trade.getTradePrice(), trade.getTradeSize());
-            std::cout << "-----------------------------\n";
+            std::cout << "trade\n";
         }
     }
 };
